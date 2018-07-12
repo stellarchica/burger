@@ -1,0 +1,9 @@
+body{
+    background: url("#");
+    font-family: 'Coiny', cursive, serif;
+    font-size: 16px;
+  }
+  
+  .card{
+    padding: 2px;
+  }
