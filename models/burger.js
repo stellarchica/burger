@@ -13,21 +13,21 @@ var burger = {
         });
     },
 
-    insertItem: function(val, cb){
-        orm.insertItem("burgers", "burger_name", val, function(res){
+    insertOne: function(val, cb){
+        orm.insertOne("burgers", "burger_name", val, function(res){
             cb(res);
         });
     },
 
     // research more about Val
-    updateItem: function(colVal, conditionVal, cb){
-        orm.updateItem("burgers", "devoured", colVal, "id", conditionVal, function(res){
+    updateOne: function(colVal, conditionVal, cb){
+        orm.updateOne("burgers", "devoured", colVal, "id", conditionVal, function(res){
             cb(res);
         });
     },
 
-    deleteItem: function(conditionVal, cb){
-        orm.deleteItem("burgers", "id", conditionVal, function(res){
+    deleteOne: function(conditionVal, cb){
+        orm.deleteOne("burgers", "id", conditionVal, function(res){
             cb(res);
         });
     }
