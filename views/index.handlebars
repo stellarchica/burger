@@ -1,8 +1,9 @@
 <div class="row">
+    {{!-- <h1>hello!</h1> --}}
   {{! Burgers to eat}}
   <div class="col s6 center-align">
     <ul>
-      {{#each brgr}}
+      {{#each burger}}
         {{#unless this.devoured}}
           <div class="card light-green">
             <p>
@@ -21,7 +22,7 @@
   {{! Devoured Burgers}}
   <div class="col s6 center-align">
     <ul>
-      {{#each brgr}}
+      {{#each burger}}
         {{#if this.devoured}}
           <div class="card light-green lighten-2">
             <p class="grey-text">
@@ -43,7 +44,7 @@
   <div class="col s6">
     <div class="card-panel center-align deep-purple lighten-3">
     {{! Dropdown that allows user to only pick burgers on menu }}
-      {{> menu/dropdown}}
+      {{!-- {{> menu/dropdown}} --}}
     </div>
   </div>
 </div>

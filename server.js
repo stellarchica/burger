@@ -1,6 +1,5 @@
 var express = require("express");
 var bodyParser = require("body-parser");
-// uhhh...
 var methodOverride = require("method-override");
 
 var app = express();
@@ -23,5 +22,5 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/burgers_controller.js");
 app.use("/", routes);
 
-var port = process.env.PORT || 3306;
+var port = process.env.PORT || 3000;
 app.listen(port);

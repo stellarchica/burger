@@ -11,19 +11,21 @@ router.get("/", function(req, res){
 
     // burger table
     burger.selectAll(function(data){
+        console.log("data", data);
         for(var i=0;i<data.length; i++){
             info.bgr.push(data[i]);
         }
+        console.log("burger array", info.bgr);
 
-        // menu table
-        burger.getMenu(function(data){
-            for(var i=0;i<data.length; i++){
-                info.itm.push(data[i]);
-            }
-            // check!!! should send to index.handlebars
-            res.render("index", info);
+            res.render("index", {burger:info.bgr});
         });
-    });
+        // // menu table
+        // burger.getMenu(function(data){
+        //     for(var i=0;i<data.length; i++){
+        //         info.itm.push(data[i]);
+        //     }
+        //     // check!!! should send to index.handlebars
+
 });
 
 router.get("/menu", function(req, res){
@@ -44,10 +46,10 @@ router.put("/update/:id", function(req, res){
     });
 });
 
-router.delete("/delete/:id", function(req, res){
-    burger.deleteOne([req.params.id], function(){
-        res.redirect("/");
-    });
-});
+// router.delete("/delete/:id", function(req, res){
+//     burger.deleteOne([req.params.id], function(){
+//         res.redirect("/");
+//     });
+// });
 
 module.exports = router;
