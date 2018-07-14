@@ -1,9 +1,9 @@
-/* body{
-    background: url("#");
-    font-family: 'Coiny', cursive, serif;
+body{
+    background: url("../img/burgerImg.jpg");
+    font-family: "Century Gothic, cursive, serif";
     font-size: 16px;
-  }
+}
   
-  .card{
+.card{
     padding: 2px;
-  } */
+}
